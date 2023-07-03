@@ -58,6 +58,9 @@ const { createApp } = Vue
     methods: {
         next () {
             this.count++
+        },
+        prev () {
+            this.count--
         }
     }
   }).mount('#app')
