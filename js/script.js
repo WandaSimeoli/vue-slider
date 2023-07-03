@@ -29,6 +29,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
+        count : 0,
         slides : [
             {
                 image: 'img/01.webp',
@@ -55,8 +56,8 @@ const { createApp } = Vue
       }
     },
     methods: {
-        function () {
-
+        next () {
+            this.count++
         }
     }
   }).mount('#app')
