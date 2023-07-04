@@ -16,8 +16,8 @@
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
 
-                <div class="item">
-                    <img :src="slides[count].image" alt="" />
+                <div class="item" v-if="">
+                    <img :src="slides[count].image" alt="slides[0].title" />
                     <div class="text">
                         <h3>{{slides[count].title}}</h3>
                         <p>
@@ -28,7 +28,7 @@
                 <div class="thumbs">
                     <div @click="prev()" class="prev"></div>
                     <div @click="next()" class="next"></div>
-                    <div v-for="(thumb,index) in slides" class="thumb active">
+                    <div v-for="(thumb,index) in slides"  class="thumb" :class="index == count ? 'active' : ''">
                         <img :src="thumb.image" alt="Svezia" />
                     </div>
                     <!-- <div class="thumb">
